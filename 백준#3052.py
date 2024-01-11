@@ -12,6 +12,7 @@ rlist2=list(rlist1)
 
 for j in range(10):
     rlist2.count(j)
+# nonono
     
 
 
