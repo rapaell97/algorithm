@@ -15,7 +15,7 @@ for k in word_list:
                 else:
                     cnt+=1
         else:
-            ??
+            ## ??
 
 
 print(cnt)
