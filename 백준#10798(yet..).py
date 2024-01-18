@@ -14,19 +14,10 @@ for k in range(len(word_list)):
         for w in range(add_list):
             word_list[k].append(None)
 
-# cnt = 0
-# for m in range(len(word_list)):
-#     for n in word_list[m]:
-#         if n == None:
-#             continue
-#         print(n[cnt],end='')
-#     cnt+=1
 
-
-cnt = 0
 for m in range(max_len):
     for n in range(len(word_list)):
-        if cnt < len(word_list[n]) and word_list[n][cnt] is not None:
-            print(word_list[n][cnt], end='')
-    cnt += 1
+        if word_list[n][m] != None:
+            print(word_list[n][m],end='')
+
 
