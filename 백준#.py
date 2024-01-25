@@ -25,10 +25,10 @@ for k in range(galo-7):
             ans_ga = k
 cnt = 0
 
-lst=[['z' for _ in range(8)] for _ in range(8)]
+lst=[[] for _ in range(8)]
 for i in range(8):
-    for k in range(8):
-        if
+        if i%2 == 0:
+            lst[i] = ["W",BWBWBWB]
 
 
 print(cnt)
