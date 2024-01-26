@@ -1,7 +1,24 @@
-word = input()
-print(len(word))
-cnt=0
-for i in word:
-    if i == word[-1]:
-        cnt+=1
-print(cnt)
+T = int(input())
+for i in range(T):
+    test_number = int(input())
+    scores = list(map(int, input().split()))
+    mode = 0  # 1
+
+    # 2
+    count_dic = {}
+    for i in scores:
+        if i in count_dic:
+            count_dic[i] += 1
+        else:
+            count_dic[i] = 1
+    # 3
+    max_count = 0
+    for key, value in count_dic.items():
+        if max_count < value:  # 4
+            max_count = value
+            mode = key
+        elif max_count == value:  # 5
+            if mode < key:
+                mode = key
+    # 6
+    print('#{} {}'.format(test_number, mode))
