@@ -1,8 +1,17 @@
-a=list(map(int,input().split()))
-b=list(map(int,input().split()))
-c=list(map(int,input().split()))
-d=list()
-for i in range(5):
-    x=a[i]*b[i]+c[i]
-    d.append(x)
-print(*d)
+num = int(input())
+lst = [[0 for _ in range(4)]for _ in range(4)]
+
+for i in range(len(lst)):
+    if i%2 == 0:
+        for k in range(len(lst[i])):
+            lst[i][k]=num
+            num+=1
+    else:
+        for k in range(len(lst[i])-1,-1,-1):
+            lst[i][k]=num
+            num+=1
+
+for i in lst:
+    for k in i:
+        print(k,end=' ')
+    print()
