@@ -1,25 +1,18 @@
 test = int(input())
 for u in range(test):
-    num = int(input())
-    nums = list(input())
+    x = int(input())
+    nums = input()
+    counts = [0 for _ in range(10)]
 
-    int_nums = list()
-    for i in range(num):
-        int_nums.append(int(nums[i]))
+    for i in nums:
+        counts[int(i)] += 1
 
-    cnt_lst = [-1 for _ in range(10)]
+    max_cnt = 0
+    max_num = 0
+    for i in range(len(counts)):
+        if counts[i] >= max_cnt:
+            max_cnt = counts[i]
+            max_num = i
 
-    for i in int_nums:
-        cnt_lst[i]+=1
-
-    m = max(cnt_lst)
-
-    if cnt_lst.count(m)>=2:
-        same=list()
-        for k in range(len(cnt_lst)):
-            if cnt_lst[k] == m :
-                same.append(k)
-        print(f"#{u+1} {max(same)} {int_nums.count(max(same))}")
-    else:
-        print(f"#{u+1} {cnt_lst.index(m)} {int_nums.count(cnt_lst.index(m))}")
+    print(f"#{u+1} {max_num} {max_cnt}")
 
