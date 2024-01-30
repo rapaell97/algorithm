@@ -2,7 +2,7 @@ for u in range(10):
     dump = int(input())
     box = list(map(int, input().split()))
 
-    i =
+    i = 0
     maxindex = 0
     minindex = 0
 
