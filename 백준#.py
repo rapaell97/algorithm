@@ -1,10 +1,12 @@
-case = int(input())
-lst = list(map(int,input().split()))
-max_score = max(lst)
-new_lst = list()
-
-for i in lst:
-    ns = i/max_score*100
-    new_lst.append(ns)
-
-print(sum(new_lst)/case)
+num = int(input())
+r=1
+for i in range(1,num+1):
+    r*=i
+cnt = 0
+r=str(r)
+for i in r[::-1]:
+    if i == '0':
+        cnt+=1
+    else:
+        print(cnt)
+        break
