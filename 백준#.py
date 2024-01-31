@@ -1,9 +1,10 @@
 case = int(input())
-lst = [input() for _ in range(case)]
-lst_set = set(lst)
-real_lst = list(lst_set)
+lst = list(map(int,input().split()))
+max_score = max(lst)
+new_lst = list()
 
-real_lst.sort(key = lambda x:(len(x),x))
+for i in lst:
+    ns = i/max_score*100
+    new_lst.append(ns)
 
-for i in real_lst:
-    print(i)
+print(sum(new_lst)/case)
