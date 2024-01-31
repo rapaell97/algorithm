@@ -1,12 +1,10 @@
 num = int(input())
-r=1
-for i in range(1,num+1):
-    r*=i
-cnt = 0
-r=str(r)
-for i in r[::-1]:
-    if i == '0':
-        cnt+=1
-    else:
-        print(cnt)
-        break
+lst = [int(input()) for _ in range(num)]
+
+counts = [0 for _ in range(10001)]
+
+for i in lst:
+    counts[i]+=1
+
+for i in counts:
+    if i != 0:
