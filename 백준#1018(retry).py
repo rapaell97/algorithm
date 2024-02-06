@@ -1,10 +1,6 @@
-selo,galo = list(map(int,input().split()))
-lst = list()
-
-for i in range(selo):
-    lst.append(list(input()))
-
-min_cnt = 8*8
+m,n = map(int,input().split())
+lst = [list(input()) for _ in range(m)]
+ans = 64
 
 lstw=[[] for _ in range(8)]
 lstb=[[] for _ in range(8)]
@@ -16,35 +12,16 @@ for i in range(8):
             lstw[i] = ["B","W","B","W","B","W","B","W"]
             lstb[i] = ["W","B","W","B","W","B","W","B"]
 
-for i in range(selo-7):
-    for k in range(galo-7):
-        cntb=0
-        cntw=0
+for i in range(m-7):
+    for k in range(n-7):
+        temp_b = 0
+        temp_w = 0
+        for p in range(8):
+            for q in range(8):
+                if lst[i+p][k+q] != lstw[p][q]:
+                    temp_w += 1
+                if lst[i+p][k+q] != lstb[p][q]:
+                    temp_b += 1
+        ans = min(ans,temp_b,temp_w)
 
-        for m in range(8):
-            for n in range(8):
-                if lst[i+m][k+n] != lstw[m][n]:
-                    cntw+=1
-                if lst[i+m][k+n] != lstb[m][n]:
-                    cntb+=1
-
-        min_cnt = min(min_cnt,cntb,cntw)
-
-print(min_cnt)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(ans)
