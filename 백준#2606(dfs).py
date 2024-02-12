@@ -12,7 +12,6 @@ for _ in range(e):
 
 def dfs(computer):
     kill[computer] = 1
-
     for i in range(v+1):
         if kill[i] == 0 and lst[computer][i] == 1:
             dfs(i)
