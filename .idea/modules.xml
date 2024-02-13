@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< HEAD
-      <module fileurl="file://$PROJECT_DIR$/.idea/알고리즘.iml" filepath="$PROJECT_DIR$/.idea/알고리즘.iml" />
-=======
       <module fileurl="file://$PROJECT_DIR$/.idea/algorithm.iml" filepath="$PROJECT_DIR$/.idea/algorithm.iml" />
->>>>>>> a403de93b341c61cf3348f17e665fc5c18be3db7
     </modules>
   </component>
 </project>
