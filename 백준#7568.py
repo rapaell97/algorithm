@@ -11,6 +11,3 @@ for k in info_list:
         if k[0]<j[0] and k[1]<j[1]:
             cnt+=1
     print(cnt,end=' ')
-
-
-    k[0] = info_list[k][0]
