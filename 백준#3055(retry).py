@@ -1,10 +1,8 @@
 from collections import deque
 def flood(si,sk):
-    i = si
-    k = sk
     for j in range(4):
-        ni = i + di[j]
-        nk = k + dk[j]
+        ni = si + di[j]
+        nk = sk + dk[j]
         if 0<= ni <N and 0<= nk <M and (lst[ni][nk] == '.' or lst[ni][nk] == 'S'):
             lst[ni][nk] = '*'
 
@@ -50,6 +48,5 @@ for i in range(len(lst)):
         if lst[i][k] == 'S':
             go_i = i
             go_k = k
-
 
 print(bfs(go_i,go_k,0))
