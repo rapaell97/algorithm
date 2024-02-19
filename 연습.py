@@ -1,32 +1,40 @@
-T = int(input())
-for tc in range(1,T+1):
-    N , M = map(int,input().split())
-    lst = [list(input()) for _ in range(N)]
-    ans = 0
-    for i in lst[0]:
-        if i != 'W':
-            ans += 1
-    for i in lst[-1]:
-        if i != 'R':
-            ans += 1
+from collections import deque
+import sys
+input = sys.stdin.readline
+def bfs(ei,ek,cnt):
+    visit = [[0 for _ in range(M)] for _ in range(M)]
+    queue = deque()
+    queue.append((goal_i,goal_k,cnt))
+    while queue:
+        i,k,cnt = queue.popleft()
+        if i == ei and k == ek:
+            return cnt
+        for j in range(4):
+            ni = i + di[j]
+            nk = k + dk[j]
+            if 0<= ni <N and 0<= nk <M and visit[ni][nk] == 0 and lst[ni][nk] != 0:
+                visit[ni][nk] = 1
+                queue.append((ni,nk,cnt+1))
+    else:
+        return -1
 
-    part_ans = (N-2)*M
-    for i in range(1,N-1):
-        temp = 0
-        for k in range(len(lst[i])):
-            if lst[i][k] != 'B':
-                temp += 1
+N , M = map(int,input().split())
+lst = [list(map(int,input().split())) for _ in range(N)]
 
-        for j in range(1,i):
-            for k in range(len(lst[j])):
-                if lst[j][k] != 'W':
-                    temp += 1
+for i in range(len(lst)):
+    for k in range(len(lst[i])):
+        if lst[i][k] == 2:
+            goal_i = i
+            goal_k = k
 
-        for j in range(i+1,N-1):
-            for k in range(len(lst[j])):
-                if lst[j][k] != 'R':
-                    temp += 1
-        if temp < part_ans:
-            part_ans = temp
+di = [-1,0,1,0]
+dk = [0,1,0,-1]
 
-    print(f"#{tc} {ans+part_ans}")
+for i in range(N):
+    for k in range(M):
+        if lst[i][k] == 1:
+            print(bfs(i,k,0),end=' ')
+        else:
+            print(0,end=' ')
+    print()
+
