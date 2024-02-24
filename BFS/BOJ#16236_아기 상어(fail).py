@@ -1,6 +1,6 @@
 from collections import deque
 import sys
-sys.stdin = open('my_input.txt', 'r')
+sys.stdin = open('../my_input.txt', 'r')
 def bfs(i, k):
     visit = [[0] * N for _ in range(N)]
     visit[i][k] = 1
