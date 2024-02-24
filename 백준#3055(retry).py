@@ -8,7 +8,7 @@ def flood(si,sk):
 
 def bfs(si,sk,cnt):
     queue = deque()
-    queue.append((si,sk,cnt))
+    queue.append((si, sk, cnt))
     while queue:
         water = list()
         for p in range(len(lst)):
@@ -18,6 +18,7 @@ def bfs(si,sk,cnt):
         if len(water) != 0:
             for w in water:
                 flood(w[0], w[1])
+
         for _ in range(len(queue)):
             i, k, cnt = queue.popleft()
             if i == vi_i and k == vi_k:
@@ -39,7 +40,7 @@ visit = [[0 for _ in range(M)]for _ in range(N)]
 di = [-1,0,1,0]
 dk = [0,1,0,-1]
 
-go_i,go_k,vi_i,vi_k = 0,0,0,0
+go_i, go_k, vi_i, vi_k = 0, 0, 0, 0
 for i in range(len(lst)):
     for k in range(len(lst[i])):
         if lst[i][k] == 'D':
@@ -49,4 +50,4 @@ for i in range(len(lst)):
             go_i = i
             go_k = k
 
-print(bfs(go_i,go_k,0))
+print(bfs(go_i, go_k, 0))
