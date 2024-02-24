@@ -26,7 +26,6 @@ def bfs(i, k):
 
         distance += 1
 
-
 N , M = map(int, input().split())
 
 mirro = [list(input()) for _ in range(N)]
@@ -36,5 +35,3 @@ dk = [0, 1, 0, -1]
 
 distance = 1
 bfs(0 , 0)
-
-
