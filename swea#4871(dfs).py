@@ -1,4 +1,3 @@
-# 재귀호출을 이용한 DFS 그래프 경로 탐색
 def dfs(node):
     visit[node] = 1
     for i in range(1, v+1):
