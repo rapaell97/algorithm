@@ -32,7 +32,7 @@ def bfs():
                 queue.append((i, k))
 
     while queue:
-        p , q = queue.popleft()
+        p, q = queue.popleft()
 
         for j in range(4):
             np = p + di[j]
