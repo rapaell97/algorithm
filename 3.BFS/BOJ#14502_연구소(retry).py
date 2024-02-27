@@ -40,7 +40,7 @@ def bfs():
 
             if 0<= np <N and 0<= nq <M and sample_lst[np][nq] == 0:
                 sample_lst[np][nq] = 2
-                queue.append((np , nq))
+                queue.append((np, nq))
 
     temp = 0
     for i in range(N):
@@ -48,7 +48,7 @@ def bfs():
             if sample_lst[i][k] == 0:
                 temp += 1
 
-    ans = max(temp , ans)
+    ans = max(temp, ans)
 
 ans = 0
 make_wall(0)
