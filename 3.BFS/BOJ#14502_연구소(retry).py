@@ -29,7 +29,7 @@ def bfs():
     for i in range(N):
         for k in range(M):
             if sample_lst[i][k] == 2:
-                queue.append((i , k))
+                queue.append((i, k))
 
     while queue:
         p , q = queue.popleft()

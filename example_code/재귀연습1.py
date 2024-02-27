@@ -5,6 +5,7 @@ def ABC(level):
         return
     ABC(level+1)
 ABC(0)
+
 # 2 012
 def ABC(level):
     if level == 3:
@@ -12,6 +13,7 @@ def ABC(level):
     # print(level)
     ABC(level+1)
 ABC(0)
+
 #3 210
 def ABC(level):
     if level == 3:
@@ -19,6 +21,7 @@ def ABC(level):
     ABC(level+1)
     #print(level,end='')
 ABC(0)
+
 # 4 0123210
 def ABC(level):
     #print(level,end=' ')
@@ -27,6 +30,7 @@ def ABC(level):
     ABC(level + 1)
     #print(level, end=' ')
 ABC(0)
+
 # 5 012210
 def ABC(level):
     if level == 3:
