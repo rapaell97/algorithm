@@ -3,10 +3,10 @@ def dfs(n, start):
         print(*ans)
         return
 
-    for i in range(start, N+1):
-        ans.append(i)
-        dfs(n+1, i+1)
-        ans.pop()
+    for j in range(start, N + 1):
+        ans[n] = j
+        dfs(n + 1, j + 1)
+
 N, M = map(int, input().split())
-ans = list()
+ans = [0] * M
 dfs(0, 1)

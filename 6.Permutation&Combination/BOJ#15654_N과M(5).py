@@ -1,18 +1,19 @@
-def dfs(n):
+def perm(n):
     if n == M:
         print(*ans)
         return
-    for i in range(0, N):
-        if use[i] == 0:
-            use[i] = 1
-            ans.append(lst[i])
-            dfs(n+1)
-            use[i] = 0
-            ans.pop()
 
-N , M = map(int, input().split())
+    for j in range(N):
+        if use[j] == 0:
+            use[j] = 1
+            ans[n] = lst[j]
+            perm(n + 1)
+            use[j] = 0
+
+N, M = map(int, input().split())
 lst = list(map(int, input().split()))
 lst.sort()
-use = [0 for _ in range(N+1)]
-ans = list()
-dfs(0)
+ans = [0] * M
+use = [0] * N
+
+perm(0)

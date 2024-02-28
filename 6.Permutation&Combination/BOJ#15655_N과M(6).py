@@ -1,15 +1,15 @@
-def dfs(n, index):
+def comb(n, start):
     if n == M:
         print(*ans)
         return
 
-    for i in range(index, N):
-        ans.append(lst[i])
-        dfs(n+1, i+1)
-        ans.pop()
+    for j in range(start, N):
+        ans[n] = lst[j]
+        comb(n + 1, j + 1)
 
-N , M = map(int, input().split())
+N, M = map(int, input().split())
 lst = list(map(int, input().split()))
 lst.sort()
-ans = list()
-dfs(0, 0)
+
+ans = [0] * M
+comb(0, 0)

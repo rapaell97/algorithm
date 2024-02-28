@@ -3,10 +3,13 @@ def perm(n):
         print(*ans)
         return
 
-    for j in range(1, N + 1):
-        ans[n] = j
+    for j in range(N):
+        ans[n] = lst[j]
         perm(n + 1)
 
 N, M = map(int, input().split())
+lst = list(map(int, input().split()))
+lst.sort()
+
 ans = [0] * M
 perm(0)
