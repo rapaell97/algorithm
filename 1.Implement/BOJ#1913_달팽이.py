@@ -22,7 +22,7 @@ for t in range(N ** 2, 0, -1):
 
 for i in range(N):
     for k in range(N):
-        print(lst[i][k], end = ' ')
+        print(lst[i][k], end=' ')
 
         if lst[i][k] == num:
             ans_i = i

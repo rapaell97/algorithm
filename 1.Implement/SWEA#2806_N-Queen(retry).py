@@ -15,7 +15,7 @@ def bk(i, queen): # i : i번째 행에 퀸을 놓을 지 말지 정하는 작업
             if visit[j][k] == 1:
                 check = False
                 break
-        for j in range(1,i+1):
+        for j in range(1, i+1):
             if i - j >= 0 and k - j >= 0 and visit[i-j][k-j] == 1: # 좌측 대각선
                 check = False
                 break
@@ -25,15 +25,15 @@ def bk(i, queen): # i : i번째 행에 퀸을 놓을 지 말지 정하는 작업
 
         if check:
             visit[i][k] = 1
-            bk(i+1,queen+1)
+            bk(i+1, queen+1)
             visit[i][k] = 0
 
 T = int(input())
-for tc in range(1,T+1):
+for tc in range(1, T+1):
     N = int(input())
     visit = [[0 for _ in range(N)] for _ in range(N)] # 체스판
     cnt = 0 # 퀸을 놓을 수 있는 경우의 수
-    bk(0,0)
+    bk(0, 0)
     print(f"#{tc} {cnt}")
 
 
