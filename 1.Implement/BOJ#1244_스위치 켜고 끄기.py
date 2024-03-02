@@ -1,5 +1,7 @@
 import sys
-sys.stdin = open ('../my_input.txt', 'r')
+sys.stdin = open('../my_input.txt', 'r')
+
+
 def boy(x):
     for i in range(1, 101):
         temp = x * i
@@ -11,6 +13,7 @@ def boy(x):
                 lst[temp] = 0
         else:
             break
+
 
 def girl(x):
 
@@ -38,6 +41,7 @@ def girl(x):
 
         i += 1
 
+
 N = int(input())
 lst = [0] + list(map(int, input().split()))
 
@@ -52,5 +56,5 @@ for j in range(num):
 
 for i in range(1, N+1):
     print(lst[i], end=" ")
-    if i % 20 == 0 :
+    if i % 20 == 0:
         print()
