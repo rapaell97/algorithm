@@ -4,7 +4,7 @@ import copy
 from collections import deque
 input = sys.stdin.readline
 
-N , M = map(int, input().split())
+N, M = map(int, input().split())
 lst = [list(map(int, input().split())) for _ in range(N)]
 di = [-1, 0, 1, 0]
 dk = [0, 1, 0, -1]

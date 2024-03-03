@@ -37,7 +37,3 @@ for o in lst:
             ans += 1
 
 print(ans)
-
-
-
-
