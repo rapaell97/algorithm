@@ -5,6 +5,7 @@ sys.stdin = open('../a.txt', 'r')
 di = [-1, 0, 1, 0]
 dk = [0, 1, 0, -1]
 
+
 def dijkstra(i, k, cnt):
     queue = []
     heapq.heappush(queue, (i, k, cnt))
