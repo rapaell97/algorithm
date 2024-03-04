@@ -1,6 +1,4 @@
 import heapq
-import sys
-sys.stdin = open('../a.txt', 'r')
 
 di = [-1, 0, 1, 0]
 dk = [0, 1, 0, -1]
