@@ -4,8 +4,8 @@ sys.stdin = open ('../my_input.txt', 'r')
 def dfs(x):
     visit[x] = 1
 
-    for j in range(100):
-        if j in graph[x] and visit[j] == 0:
+    for j in graph[x]:
+        if visit[j] == 0:
             dfs(j)
 
 for tc in range(1 , 11):
