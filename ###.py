@@ -23,3 +23,4 @@ for T in range(1, 11):
         i += 1
 
     print(f"#{T}", max(lst) - min(lst))
+
