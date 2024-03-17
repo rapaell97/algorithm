@@ -1,6 +1,6 @@
 from collections import deque
 import sys
-sys.stdin = open('../a.txt', 'r')
+sys.stdin = open('../../a.txt', 'r')
 
 
 def bfs(i, j):

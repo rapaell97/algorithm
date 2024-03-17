@@ -1,6 +1,6 @@
 import sys
 input = sys.stdin.readline
-sys.stdin = open('../a.txt', 'r')
+sys.stdin = open('../../a.txt', 'r')
 
 def dfs(i, k, cnt):
     global ans

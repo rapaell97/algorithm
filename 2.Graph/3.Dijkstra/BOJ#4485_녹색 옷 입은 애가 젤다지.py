@@ -1,6 +1,6 @@
 import heapq
 import sys
-sys.stdin = open('../a.txt', 'r')
+sys.stdin = open('../../a.txt', 'r')
 def dijkstra(i, k):
     queue = []
     cnt = lst[0][0]

@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open('../a.txt', 'r')
+sys.stdin = open('../../a.txt', 'r')
 
 def cal(arr):
     temp_ans = 0

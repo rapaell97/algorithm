@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open('../a.txt', 'r')
+sys.stdin = open('../../a.txt', 'r')
 import heapq
 
 
