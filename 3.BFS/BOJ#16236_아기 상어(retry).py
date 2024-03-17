@@ -1,6 +1,8 @@
 import sys
 from collections import deque
+
 sys.stdin = open('../a.txt', 'r')
+
 
 def bfs(i, k):
     V = [[0] * N for _ in range(N)]
@@ -13,7 +15,7 @@ def bfs(i, k):
     while queue:
         if len(fish) != 0:
             V = [[0] * N for _ in range(N)]
-            fish.sort(key=lambda x:(x[0], x[1]))
+            fish.sort(key=lambda x: (x[0], x[1]))
             queue.clear()
             queue.append((fish[0][0], fish[0][1]))
             lst[fish[0][0]][fish[0][1]] = 0
@@ -58,6 +60,7 @@ def bfs(i, k):
     else:
         print(ans)
         return
+
 
 N = int(input())
 lst = [list(map(int, input().split())) for _ in range(N)]
