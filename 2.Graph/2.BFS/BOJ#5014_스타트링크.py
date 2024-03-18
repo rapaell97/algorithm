@@ -1,5 +1,3 @@
-import sys
-sys.stdin = open ('../my_input.txt', 'r')
 from collections import deque
 
 def bfs(i):
