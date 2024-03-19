@@ -15,9 +15,6 @@ while S < E:
         ans_1 = lst[S]
         ans_2 = lst[E]
 
-        if result == 0:
-            break
-
     if temp < 0:
         S += 1
     else:
