@@ -1,7 +1,6 @@
 import sys
 from collections import deque
 sys.stdin = open('../../a.txt', 'r')
-input = sys.stdin.readline
 
 def bfs(p, q):
     queue = deque()
