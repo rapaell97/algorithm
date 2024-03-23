@@ -1,12 +1,9 @@
 from collections import deque
-import sys
-sys.stdin = open('../../a.txt', 'r')
 
 move_1 = ['^', '>', 'v', '<']
+move_2 = ['_', '|']
 di = [-1, 0, 1, 0]
 dk = [0, 1, 0, -1]
-move_2 = ['_', '|']
-
 
 def bfs(i, k, c, m, d):
     queue = deque()

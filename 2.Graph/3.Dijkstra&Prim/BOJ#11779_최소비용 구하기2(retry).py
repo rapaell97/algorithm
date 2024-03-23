@@ -1,10 +1,9 @@
-import sys
-sys.stdin = open('../../a.txt', 'r')
 import heapq
+
 
 def dijkstra(S):
     queue = []
-    heapq.heappush(queue,(0, S))
+    heapq.heappush(queue, (0, S))
 
     while queue:
         cnt, S = heapq.heappop(queue)
@@ -18,11 +17,12 @@ def dijkstra(S):
                 if cost[e] > temp:
                     cost[e] = temp
                     path[e] = S
-                    heapq.heappush(queue,(temp, e))
+                    heapq.heappush(queue, (temp, e))
+
 
 N = int(input())
 M = int(input())
-graph = [[] for _ in range(N+1)]
+graph = [[] for _ in range(N + 1)]
 
 for _ in range(M):
     s, e, c = map(int, input().split())
@@ -34,7 +34,7 @@ INF = float('inf')
 cost = [INF] * (N + 1)
 cost[S] = 0
 
-path = [[] for _ in range(N+1)]
+path = [[] for _ in range(N + 1)]
 path[S] = [S]
 
 dijkstra(S)

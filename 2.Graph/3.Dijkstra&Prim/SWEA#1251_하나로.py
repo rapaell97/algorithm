@@ -15,7 +15,7 @@ def prim(n):
         for j in range(1, N + 1):
             if V[j] == 0:
                 temp = (X[n] - X[j]) ** 2 + (Y[n] - Y[j]) ** 2
-                heapq.heappush(queue,(temp, j))
+                heapq.heappush(queue, (temp, j))
 
 
 T = int(input())
@@ -27,11 +27,8 @@ for tc in range(1, T + 1):
     E = float(input())
 
     V = [0] * (N + 1)
-    INF = float('inf')
-    dist = [INF] * (N+1)
 
     ans = 0
     prim(1)
 
-    print(round(ans*E))
-
+    print(round(ans * E))
