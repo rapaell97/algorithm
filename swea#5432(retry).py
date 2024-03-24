@@ -8,10 +8,10 @@ for u in range(tc):
         if lst[i] == '(':
             stack.append(lst[i])
         else:
-            if lst[i-1] == '(':
+            if lst[i - 1] == '(':
                 stack.pop()
-                ans+=len(stack)
+                ans += len(stack)
             else:
                 stack.pop()
-                ans+=1
-    print(f"#{u+1} {ans}")
+                ans += 1
+    print(f"#{u + 1} {ans}")
