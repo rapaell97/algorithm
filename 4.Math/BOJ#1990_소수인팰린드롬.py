@@ -1,7 +1,3 @@
-import sys
-input = sys.stdin.readline
-sys.stdin = open('../a.txt', 'r')
-
 A, B = map(int, input().split())
 if B > 10**7:
     B = 10**7
