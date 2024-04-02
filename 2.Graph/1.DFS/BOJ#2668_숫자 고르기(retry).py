@@ -1,5 +1,3 @@
-import sys
-sys.stdin = open('../../a.txt', 'r')
 def dfs(i, t):
     V[i] = 1
 
