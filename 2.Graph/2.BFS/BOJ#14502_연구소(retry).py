@@ -1,6 +1,8 @@
 import sys
 from collections import deque
+
 input = sys.stdin.readline
+
 
 def bfs(arr):
     V = [[0] * M for _ in range(N)]
@@ -19,7 +21,7 @@ def bfs(arr):
             np = p + di[j]
             nq = q + dk[j]
 
-            if 0<= np <N and 0<= nq <M and lst[np][nq] == 0 and V[np][nq] == 0:
+            if 0 <= np < N and 0 <= nq < M and lst[np][nq] == 0 and V[np][nq] == 0:
                 queue.append((np, nq))
                 V[np][nq] = 1
                 cnt -= 1
@@ -47,9 +49,9 @@ for i in range(N):
 S = len(wall_lst)
 
 ans = 0
-for i in range(S-2):
-    for j in range(i+1, S-1):
-        for k in range(j+1, S):
+for i in range(S - 2):
+    for j in range(i + 1, S - 1):
+        for k in range(j + 1, S):
             ans = max(ans, bfs([wall_lst[i], wall_lst[j], wall_lst[k]]))
 
 print(ans)
