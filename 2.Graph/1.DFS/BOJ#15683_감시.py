@@ -4,8 +4,12 @@ def find():
         for k in range(M):
             if lst[i][k] == 0:
                 blind += 1
-
     return blind
+
+
+def back(arr):
+    for i, k, o in arr:
+        lst[i][k] = o
 
 
 def dfs(n):
@@ -15,13 +19,25 @@ def dfs(n):
         ans = min(ans, find())
         return
 
-    i, k = cctv[n]
-    direct = lst[i][k]
-    for j in range(len(dic[direct])):
-        origin_i, origin_k = i, k
-        for p, q in dic[direct][j]:
-            ni, nk = i + p, k + q
-            # 각도 설정 끝났고 각도마다 출발해야댐
+    i, k, c_num = cctv[n]
+
+    for j in range(len(dic[c_num])):
+        temp = []
+        for l in range(len(dic[c_num][j])):
+            temp_i, temp_k = i, k
+            p, q = dic[c_num][j][l]
+            while True:
+                temp_i = temp_i + p
+                temp_k = temp_k + q
+
+                if 0 <= temp_i < N and 0 <= temp_k < M and lst[temp_i][temp_k] != 6:
+                    temp.append((temp_i, temp_k, lst[temp_i][temp_k]))
+                    lst[temp_i][temp_k] = '#'
+                else:
+                    break
+
+        dfs(n + 1)
+        back(temp)
 
 
 N, M = map(int, input().split())
@@ -36,14 +52,13 @@ dic = {
 }
 
 cctv = []
-wall = []
 for i in range(N):
     for k in range(M):
-        if lst[i][k] != 0 or lst[i][k] != 6:
-            cctv.append((i, k))
-        elif lst[i][k] == 6:
-            wall.append((i, k))
+        if 1 <= lst[i][k] < 6:
+            cctv.append((i, k, lst[i][k]))
 
 cnt = len(cctv)
 ans = 21e8
 dfs(0)
+
+print(ans)
