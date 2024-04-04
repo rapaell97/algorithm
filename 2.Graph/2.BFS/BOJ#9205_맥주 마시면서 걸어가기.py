@@ -1,6 +1,6 @@
-import sys
-sys.stdin = open('../../a.txt', 'r')
 from collections import deque
+
+
 def bfs(i, k):
     queue = deque()
     queue.append((i, k))
@@ -21,6 +21,7 @@ def bfs(i, k):
     else:
         return 'sad'
 
+
 T = int(input())
 for _ in range(T):
     N = int(input())
@@ -34,4 +35,3 @@ for _ in range(T):
     end_i, end_k = map(int, input().split())
 
     print(bfs(start_i, start_k))
-
