@@ -1,5 +1,5 @@
 import sys
-input = sys.stdin.readline
+sys.stdin = open('a.txt', 'r')
 
 M = 1000000
 lst = [True] * (M + 1)
