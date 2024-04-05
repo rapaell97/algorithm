@@ -1,8 +1,4 @@
-import sys
 from collections import deque
-
-sys.stdin = open('../../a.txt', 'r')
-
 
 def bfs(i, k):
     V = [[0] * N for _ in range(N)]
