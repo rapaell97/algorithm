@@ -9,7 +9,7 @@ for u in range(tc):
 
         elif case[i] == '+':
             if len(stack) < 2:
-                print(f"#{u+1} error")
+                print(f"#{u + 1} error")
                 break
             else:
                 temp1 = int(stack.pop())
@@ -18,7 +18,7 @@ for u in range(tc):
 
         elif case[i] == '/':
             if len(stack) < 2:
-                print(f"#{u+1} error")
+                print(f"#{u + 1} error")
                 break
             else:
                 temp1 = int(stack.pop())
@@ -27,7 +27,7 @@ for u in range(tc):
 
         elif case[i] == '*':
             if len(stack) < 2:
-                print(f"#{u+1} error")
+                print(f"#{u + 1} error")
                 break
             else:
                 temp1 = int(stack.pop())
@@ -49,6 +49,3 @@ for u in range(tc):
             else:
                 print(f"#{u + 1} error")
             break
-
-
-
