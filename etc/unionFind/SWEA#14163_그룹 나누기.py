@@ -16,7 +16,7 @@ def union(n, m):
         p[n] = m
 
 import sys
-sys.stdin = open('../a.txt', 'r')
+sys.stdin = open('../../a.txt', 'r')
 
 T = int(input())
 for tc in range(1, T + 1):
