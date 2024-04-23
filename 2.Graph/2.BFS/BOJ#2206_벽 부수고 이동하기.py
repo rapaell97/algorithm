@@ -1,6 +1,8 @@
 from collections import deque
 import sys
+
 input = sys.stdin.readline
+
 
 def bfs(i, k, chance):
     global ans
@@ -24,7 +26,7 @@ def bfs(i, k, chance):
                 ni = i + di[j]
                 nk = k + dk[j]
 
-                if 0<= ni <N and 0<= nk <M :
+                if 0 <= ni < N and 0 <= nk < M:
                     if lst[ni][nk] == '0' and V[ni][nk][chance] == 0:
                         V[ni][nk][chance] = 1
                         queue.append((ni, nk, chance))
@@ -38,7 +40,8 @@ def bfs(i, k, chance):
         ans = -1
         return
 
-N , M = map(int, input().split())
+
+N, M = map(int, input().split())
 lst = [list(input()) for _ in range(N)]
 di = [-1, 0, 1, 0]
 dk = [0, 1, 0, -1]
