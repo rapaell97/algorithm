@@ -26,5 +26,5 @@ for tc in range(T):
         if not V[i]:
             temp = []
             dfs(i)
-    print(ans)
+
     print(N - len(ans))
